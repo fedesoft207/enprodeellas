@@ -4,6 +4,7 @@ from aplicacion.models import *
 from rest_framework import generics
 from aplicacion.serializers import *
 
+
 # USUARIO
 class UsuarioList(generics.ListCreateAPIView):
     serializer_class = UsuarioSerializer
