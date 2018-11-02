@@ -13,6 +13,7 @@ import { PuntosatencionPage } from '../pages/puntosatencion/puntosatencion';
 import { InicioappPage } from '../pages/inicioapp/inicioapp';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     RegistroPage,
     LineasatencionPage,
     PuntosatencionPage,
-    InicioappPage
+    InicioappPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     RegistroPage,
     LineasatencionPage,
     PuntosatencionPage,
-    InicioappPage
+    InicioappPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
