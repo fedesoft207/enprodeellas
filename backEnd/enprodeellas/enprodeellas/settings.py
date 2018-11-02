@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'UTC'
 
@@ -132,3 +133,15 @@ REST_FRAMEWORK = {
  'rest_framework.permissions.IsAuthenticated',
  )
 }
+
+#Agregamos el origen permitido y los métodos que deseamos permitir. Permitimos conexiones entrantes de ionic
+CORS_ORIGIN_WHITELIST = (
+ 'localhost:8100',
+)
+CORS_ALLOW_METHODS = (
+ 'DELETE',
+ 'GET',
+ 'PATCH',
+ 'POST',
+ 'PUT',
+)
