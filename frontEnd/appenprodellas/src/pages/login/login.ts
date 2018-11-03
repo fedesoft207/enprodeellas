@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { BotonPanicoPage } from '../boton-panico/boton-panico';
 import { InicioappPage } from '../inicioapp/inicioapp';
 
 /**
@@ -31,9 +32,7 @@ export class LoginPage {
     }
   }
 
-  inicioApp(){
-    console.log(this.email);
-    console.log(this.password);
+  iniciarSesion(){
 
     var data = {
       'username': this.email,
@@ -43,7 +42,7 @@ export class LoginPage {
     this.restProvider.login(data)
     .then((result:any) => {
       window.localStorage['token'] = result.key;
-      this.navCtrl.setRoot(InicioappPage);
+      this.navCtrl.setRoot(BotonPanicoPage);
     }, (err) => {
       console.log(err);
     });

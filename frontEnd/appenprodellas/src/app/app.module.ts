@@ -14,6 +14,7 @@ import { InicioappPage } from '../pages/inicioapp/inicioapp';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TabsPage } from '../pages/tabs/tabs';
+import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     LineasatencionPage,
     PuntosatencionPage,
     InicioappPage,
-    TabsPage
+    TabsPage,
+    BotonPanicoPage,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     LineasatencionPage,
     PuntosatencionPage,
     InicioappPage,
-    TabsPage
+    TabsPage,
+    BotonPanicoPage,
   ],
   providers: [
     StatusBar,

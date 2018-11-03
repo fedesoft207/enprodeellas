@@ -5,6 +5,7 @@ import { PuntosatencionPage } from '../puntosatencion/puntosatencion';
 import { HomePage } from '../home/home';
 import { InicioappPage } from '../inicioapp/inicioapp';
 import { LineasatencionPage } from '../lineasatencion/lineasatencion';
+import { BotonPanicoPage } from '../boton-panico/boton-panico';
 
 /**
  * Generated class for the TabsPage page.
@@ -25,6 +26,7 @@ export class TabsPage {
   inicioApp: any;
   lineasAtencion: any;
   puntosAtencion: any;
+  botonPanico: any;
 
   usuarioLogueado: Number = 0;
 
@@ -34,14 +36,23 @@ export class TabsPage {
     this.inicioApp = InicioappPage;
     this.lineasAtencion = LineasatencionPage;
     this.puntosAtencion = PuntosatencionPage;
+    this.botonPanico = BotonPanicoPage;
 
-    if( window.localStorage['token'] ){
-      this.usuarioLogueado = 1;
-    }
+    this.verificarSiUsuarioEstaLogueado();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
+  }
+
+  /*ionViewWillEnter() {
+    this.verificarSiUsuarioEstaLogueado();
+  }*/
+
+  verificarSiUsuarioEstaLogueado() {
+    if (window.localStorage['token']) {
+      this.usuarioLogueado = 1;
+    }
   }
 
 }
