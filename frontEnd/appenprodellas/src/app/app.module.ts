@@ -14,6 +14,12 @@ import { InicioappPage } from '../pages/inicioapp/inicioapp';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TabsPage } from '../pages/tabs/tabs';
+import { DanoPatrimonialPage } from '../pages/dano-patrimonial/dano-patrimonial';
+import { ViolenciaEconomicaPage } from '../pages/violencia-economica/violencia-economica';
+import { ViolenciaIntrafamiliarPage } from '../pages/violencia-intrafamiliar/violencia-intrafamiliar';
+import { ViolenciaPoliticaPage } from '../pages/violencia-politica/violencia-politica';
+import { ViolenciaPsicologicaPage } from '../pages/violencia-psicologica/violencia-psicologica';
+import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual';
 import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
 
 @NgModule({
@@ -26,6 +32,12 @@ import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
     PuntosatencionPage,
     InicioappPage,
     TabsPage,
+    DanoPatrimonialPage,
+    ViolenciaEconomicaPage,
+    ViolenciaIntrafamiliarPage,
+    ViolenciaPoliticaPage,
+    ViolenciaPsicologicaPage,
+    ViolenciaSexualPage,
     BotonPanicoPage,
   ],
   imports: [
@@ -43,6 +55,12 @@ import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
     PuntosatencionPage,
     InicioappPage,
     TabsPage,
+    DanoPatrimonialPage,
+    ViolenciaEconomicaPage,
+    ViolenciaIntrafamiliarPage,
+    ViolenciaPoliticaPage,
+    ViolenciaPsicologicaPage,
+    ViolenciaSexualPage,
     BotonPanicoPage,
   ],
   providers: [

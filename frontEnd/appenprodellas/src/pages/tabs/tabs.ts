@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Tabs } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { PuntosatencionPage } from '../puntosatencion/puntosatencion';
 import { HomePage } from '../home/home';
 import { InicioappPage } from '../inicioapp/inicioapp';
 import { LineasatencionPage } from '../lineasatencion/lineasatencion';
 import { BotonPanicoPage } from '../boton-panico/boton-panico';
+//import { Tabs } from 'ionic-angular/umd/navigation/nav-interfaces';
 
 /**
  * Generated class for the TabsPage page.
@@ -20,6 +21,8 @@ import { BotonPanicoPage } from '../boton-panico/boton-panico';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
+
+  @ViewChild('idTabs') tabRef: Tabs;
 
   home: any;
   loginPage: any;
@@ -51,7 +54,7 @@ export class TabsPage {
 
   verificarSiUsuarioEstaLogueado() {
     if (window.localStorage['token']) {
-      this.usuarioLogueado = 1;
+      this.tabRef.getByIndex(2).show = false;
     }
   }
 

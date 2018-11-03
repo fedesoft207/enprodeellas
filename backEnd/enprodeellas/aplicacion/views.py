@@ -4,8 +4,11 @@ from aplicacion.models import *
 from rest_framework import generics
 from aplicacion.serializers import *
 
+from rest_framework.decorators import permission_classes
+from aplicacion.permissions import IsPostOrIsAuthenticated
 
 # USUARIO
+@permission_classes((IsPostOrIsAuthenticated, ))
 class UsuarioList(generics.ListCreateAPIView):
     serializer_class = UsuarioSerializer
     queryset = Usuario.objects.all()

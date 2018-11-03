@@ -27,6 +27,7 @@ export class BotonPanicoPage {
   }                               
    
   cerrarSesion(){
+    this.navCtrl.parent.getByIndex(4).show = false;
     window.localStorage.clear();
     this.menuCtrl.close();
     this.navCtrl.parent.select(0);//Se muestra el tab de menú Inicio

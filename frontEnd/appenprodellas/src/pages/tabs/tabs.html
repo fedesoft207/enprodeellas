@@ -6,10 +6,10 @@
 -->
 <ion-content padding>
   <ion-tabs #idTabs>
-    <ion-tab *ngIf="usuarioLogueado==0" tabTitle="Inicio" tabIcon="home" [root]="home"></ion-tab>
-    <ion-tab *ngIf="usuarioLogueado!=2" tabTitle="Conozca más" tabIcon="paper" [root]="inicioApp"></ion-tab>
-    <ion-tab *ngIf="usuarioLogueado!=2" tabTitle="Lineas de atención" tabIcon="call" [root]="lineasAtencion"></ion-tab>
-    <ion-tab *ngIf="usuarioLogueado!=2" tabTitle="Puntos atención" tabIcon="pin" [root]="puntosAtencion"></ion-tab>
-    <ion-tab *ngIf="usuarioLogueado==1" tabTitle="Botón pánico" tabIcon="heart" [root]="botonPanico"></ion-tab>
+    <ion-tab tabTitle="Inicio" tabIcon="home" [root]="home"></ion-tab>
+    <ion-tab tabTitle="Conozca más" tabIcon="paper" [root]="inicioApp"></ion-tab>
+    <ion-tab tabTitle="Lineas de atención" tabIcon="call" [root]="lineasAtencion"></ion-tab>
+    <ion-tab tabTitle="Puntos atención" tabIcon="pin" [root]="puntosAtencion"></ion-tab>
+    <ion-tab show="false" tabTitle="Botón pánico" tabIcon="heart" [root]="botonPanico"></ion-tab>
   </ion-tabs>
 </ion-content>
