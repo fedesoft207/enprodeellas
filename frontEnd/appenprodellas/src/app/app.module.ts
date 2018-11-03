@@ -20,6 +20,7 @@ import { ViolenciaIntrafamiliarPage } from '../pages/violencia-intrafamiliar/vio
 import { ViolenciaPoliticaPage } from '../pages/violencia-politica/violencia-politica';
 import { ViolenciaPsicologicaPage } from '../pages/violencia-psicologica/violencia-psicologica';
 import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual';
+import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual'
     ViolenciaIntrafamiliarPage,
     ViolenciaPoliticaPage,
     ViolenciaPsicologicaPage,
-    ViolenciaSexualPage
+    ViolenciaSexualPage,
+    BotonPanicoPage,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual'
     ViolenciaIntrafamiliarPage,
     ViolenciaPoliticaPage,
     ViolenciaPsicologicaPage,
-    ViolenciaSexualPage
+    ViolenciaSexualPage,
+    BotonPanicoPage,
   ],
   providers: [
     StatusBar,

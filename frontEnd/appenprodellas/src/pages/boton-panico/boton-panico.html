@@ -1,0 +1,63 @@
+<!--
+  Generated template for the BotonPanicoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon> </button>
+    
+    <ion-title>Botón Pánico</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-menu [content]="menuApp">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="cerrarSesion()">
+          Cerrar Sesión
+        </button>
+        <!--button ion-item (click)="openPage(friendsPage)">
+          Friends
+        </button>
+        <button ion-item (click)="openPage(eventsPage)">
+          Events
+        </button>
+        <button ion-item (click)="closeMenu()">
+          Close Menu
+        </button-->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav id="nav" #menuApp [root]="rootPage"></ion-nav>
+  
+  <!-- Información cuerpo de la página -->
+  <h1>Página de aterrizaje</h1>
+  <p>Pendiente revisar las pantallas que se deben crear para registrar la información de contacto de emergencia y
+    habilitar la opción de botón de pánico</p>
+  <ion-card>
+    <img src="img/pendiente.png" />
+    <ion-card-content>
+      <ion-card-title>
+        Configura contacto de emergencia
+      </ion-card-title>
+      <p>
+        Una vez realices el registro de tu contacto de emergencia, se habilitará la opción de botón de pánico. Porque
+        con un clic puedes estar más segura.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
