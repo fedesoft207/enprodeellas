@@ -4,7 +4,44 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
 <ion-content padding>
+
+  <ion-menu [content]="menuApp">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="cerrarSesion()">
+          Cerrar Sesión
+        </button>
+        <!--button ion-item (click)="openPage(friendsPage)">
+                    Friends
+                  </button>
+                  <button ion-item (click)="openPage(eventsPage)">
+                    Events
+                  </button>
+                  <button ion-item (click)="closeMenu()">
+                    Close Menu
+                  </button-->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav id="nav" #menuApp [root]="rootPage"></ion-nav>
+
+
   <ion-tabs #idTabs>
     <ion-tab tabTitle="Inicio" tabIcon="home" [root]="home"></ion-tab>
     <ion-tab tabTitle="Conozca más" tabIcon="paper" [root]="inicioApp"></ion-tab>
