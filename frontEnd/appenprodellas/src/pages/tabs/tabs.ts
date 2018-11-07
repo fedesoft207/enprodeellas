@@ -40,12 +40,10 @@ export class TabsPage {
     this.lineasAtencion = LineasatencionPage;
     this.puntosAtencion = PuntosatencionPage;
     this.botonPanico = BotonPanicoPage;
-
-    this.verificarSiUsuarioEstaLogueado();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
+    this.verificarSiUsuarioEstaLogueado();
   }
 
   /*ionViewWillEnter() {
@@ -54,7 +52,9 @@ export class TabsPage {
 
   verificarSiUsuarioEstaLogueado() {
     if (window.localStorage['token']) {
-      this.tabRef.getByIndex(2).show = false;
+      //this.usuarioLogueado = 1;
+      this.tabRef.getByIndex(0).show = false;
+      this.tabRef.getByIndex(4).show = true;
     }
   }
 
