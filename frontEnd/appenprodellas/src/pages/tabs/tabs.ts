@@ -55,7 +55,7 @@ export class TabsPage {
       //this.usuarioLogueado = 1;
       this.tabRef.getByIndex(0).show = false;
       this.tabRef.getByIndex(4).show = true;
-      //this.navCtrl.setPages(InicioappPage);
+      this.tabRef.select(1);//Se muestra el tab conozca más
     }
   }
 
