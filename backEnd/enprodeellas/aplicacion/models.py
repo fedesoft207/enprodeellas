@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
-    nickname = models.CharField(max_length=100)
+    #nickname = models.CharField(max_length=100)
     correo =  models.CharField(max_length=100)
     numero_celular =  models.CharField(max_length=10)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
