@@ -16,8 +16,7 @@
 <ion-content padding>
 
     <ion-card>
-
-        <img src="img/advance-card-map-madison.png">
+          
         <ion-fab right top>
           <button ion-fab>
             <ion-icon name="pin"></ion-icon>
@@ -25,60 +24,60 @@
         </ion-fab>
       
         <ion-item>
-          <ion-icon name="football" item-start large></ion-icon>
+            <ion-icon name="pin" item-start large ></ion-icon>
+            <h2>Fiscalía</h2>
+            <p>1664 S. Bogota, Chapinero</p>
+  
+            <button ion-button icon-start clear (click)="obtenerPosicion()">
+                <ion-icon name="pin"></ion-icon>
+                Ver Ubicación
+            </button>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="pin" item-start large ></ion-icon>
+            <h2>Comisaría de familia</h2>
+            <p>Bogota, Chapinero 74 # 65</p>
+  
+            <button ion-button icon-start clear (click)="mostrarUbicacion()" >
+                <ion-icon name="pin"></ion-icon>
+                Ver Ubicación
+            </button>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="pin" item-start large ></ion-icon>
+            <h2>Juzgado de familia</h2>
+            <p>op Avenue, Madison, WI 53703</p>
+  
+            <button ion-button icon-start clear >
+                <ion-icon name="pin"></ion-icon>
+                Ver Ubicación
+            </button>
+          </ion-item>
+
+        <ion-item>
+          <ion-icon name="pin" item-start large></ion-icon>
           <h2>Cuadrante policia</h2>
           <p>11 N. Way St, Madison, WI 53703</p>
+
+          <button ion-button icon-start clear >
+              <ion-icon name="pin"></ion-icon>
+              Ver Ubicación
+          </button>
         </ion-item>
       
         <ion-item>
-          <ion-icon name="wine" item-start large ></ion-icon>
+          <ion-icon name="pin" item-start large ></ion-icon>
           <h2>Cuadrante policia</h2>
           <p>14 S. Hop Avenue, Madison, WI 53703</p>
-        </ion-item>
-      
-        <ion-item>
-          <span item-start>18 min</span>
-          <span item-start>(2.6 mi)</span>
-          <button ion-button icon-start clear item-end>
-            <ion-icon name="navigate"></ion-icon>
-            Start
+
+          <button ion-button icon-start clear >
+              <ion-icon name="pin"></ion-icon>
+              Ver Ubicación
           </button>
         </ion-item>
       
       </ion-card>
-
-      <br/>
-
-      <ion-card>
-
-          <img src="img/advance-card-map-madison.png">
-          <ion-fab right top>
-            <button ion-fab>
-              <ion-icon name="pin"></ion-icon>
-            </button>
-          </ion-fab>
-        
-          <ion-item>
-            <ion-icon name="football" item-start large></ion-icon>
-            <h2>Comisaria de familia</h2>
-            <p>11 N. Way St, Madison, WI 53703</p>
-          </ion-item>
-        
-          <ion-item>
-            <ion-icon name="wine" item-start large ></ion-icon>
-            <h2>Comisaria de familia</h2>
-            <p>14 S. Hop Avenue, Madison, WI 53703</p>
-          </ion-item>
-        
-          <ion-item>
-            <span item-start>17 min</span>
-            <span item-start>(20.6 mi)</span>
-            <button ion-button icon-start clear item-end>
-              <ion-icon name="navigate"></ion-icon>
-              Start
-            </button>
-          </ion-item>
-        
-        </ion-card>
 
 </ion-content>

@@ -17,7 +17,7 @@ import { Tabs } from 'ionic-angular/umd/navigation/nav-interfaces';
 })
 export class BotonPanicoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {

@@ -21,6 +21,8 @@ import { ViolenciaPoliticaPage } from '../pages/violencia-politica/violencia-pol
 import { ViolenciaPsicologicaPage } from '../pages/violencia-psicologica/violencia-psicologica';
 import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual';
 import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +70,8 @@ import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
-    HttpClient
+    HttpClient,
+    Geolocation
   ]
 })
 export class AppModule {}
