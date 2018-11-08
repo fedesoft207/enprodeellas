@@ -17,19 +17,27 @@
 
   <ion-list>
 
-    <ion-item>
-      <ion-label floating>Correo electrónico</ion-label>
-      <ion-input type="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label floating>Contraseña</ion-label>
-      <ion-input type="password" required [(ngModel)]="password"></ion-input>
-    </ion-item>
+    <form [formGroup]="formLogin">
+      <ion-item>
+        <ion-label floating>Correo electrónico</ion-label>
+        <ion-input type="email" formControlName="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formLogin.get('email').errors && formLogin.get('email').dirty">
+        <p *ngIf="formLogin.get('email').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" formControlName="password" required [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formLogin.get('password').errors && formLogin.get('password').dirty">
+        <p *ngIf="formLogin.get('password').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+    </form>
 
     <br>
 
-    <button ion-button full (click)="iniciarSesion()" >Iniciar sesión</button>
+    <button ion-button full (click)="iniciarSesion()" [disabled]="formLogin.invalid">Iniciar sesión</button>
 
     <p>¿Olvido su contraseña?</p>
 
