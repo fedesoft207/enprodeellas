@@ -17,18 +17,11 @@ import { Tabs } from 'ionic-angular/umd/navigation/nav-interfaces';
 })
 export class BotonPanicoPage {
 
-  //@ViewChild('idTabs') referenciaTabs: Tabs;
-
   constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BotonPanicoPage');
   }                               
-   
-  cerrarSesion(){
-    window.localStorage.clear();
-    this.menuCtrl.close();
-    this.navCtrl.parent.select(0);//Se muestra el tab de menú Inicio
-  }
+  
 }

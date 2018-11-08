@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { ViolenciaSexualPage } from '../violencia-sexual/violencia-sexual';
+import { ViolenciaIntrafamiliarPage } from '../violencia-intrafamiliar/violencia-intrafamiliar';
+import { ViolenciaEconomicaPage } from '../violencia-economica/violencia-economica';
+import { ViolenciaPsicologicaPage } from '../violencia-psicologica/violencia-psicologica';
+import { ViolenciaPoliticaPage } from '../violencia-politica/violencia-politica';
 
 /**
  * Generated class for the InicioappPage page.
@@ -8,18 +13,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-inicioapp',
   templateUrl: 'inicioapp.html',
 })
 export class InicioappPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioappPage');
+  violenciaSexual() {
+    this.navCtrl.push(ViolenciaSexualPage);
+  }
+
+  violenciaIntrafamiliar() {
+    this.navCtrl.push(ViolenciaIntrafamiliarPage);
+  }
+
+  violenciaEconomica() {
+    this.navCtrl.push(ViolenciaEconomicaPage);
+  }
+
+  violenciaPsicologica() {
+    this.navCtrl.push(ViolenciaPsicologicaPage);
+  }
+
+  violenciaPolitica() {
+    this.navCtrl.push(ViolenciaPoliticaPage);
   }
 
 }

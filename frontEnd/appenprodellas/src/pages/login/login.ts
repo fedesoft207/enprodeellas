@@ -41,6 +41,8 @@ export class LoginPage {
 
     this.restProvider.login(data)
     .then((result:any) => {
+      this.navCtrl.parent.getByIndex(0).show = false;
+      this.navCtrl.parent.getByIndex(4).show = true;
       window.localStorage['token'] = result.key;
       this.navCtrl.setRoot(BotonPanicoPage);
     }, (err) => {
