@@ -15,28 +15,45 @@
 
 <ion-content padding>
 
-  <ion-item>
-    <ion-label floating>Nombre usuario</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label floating>Correo electrónico</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
+  <form [formGroup]="formRegistro">
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" formControlName="username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formRegistro.get('username').errors && formRegistro.get('username').dirty">
+      <p *ngIf="formRegistro.get('username').hasError('required')">Este campo es requerido</p>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" formControlName="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formRegistro.get('password').errors && formRegistro.get('password').dirty">
+      <p *ngIf="formRegistro.get('password').hasError('required')">Este campo es requerido</p>
+    </ion-item>
 
-  <ion-item>
-    <ion-label floating>Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label floating>Correo electrónico</ion-label>
+      <ion-input type="email" formControlName="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formRegistro.get('email').errors && formRegistro.get('email').dirty">
+      <p *ngIf="formRegistro.get('email').hasError('required')">Este campo es requerido</p>
+    </ion-item>
 
-  <ion-item>
-    <ion-label floating>Celular</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label floating>Celular</ion-label>
+      <ion-input type="number" formControlName="numeroCelular" [(ngModel)]="numeroCelular"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formRegistro.get('numeroCelular').errors && formRegistro.get('numeroCelular').dirty">
+      <p *ngIf="formRegistro.get('numeroCelular').hasError('required')">Este campo es requerido</p>
+      <p *ngIf="formRegistro.get('numeroCelular').hasError('minlength')">Mínimo 10 caracteres numéricos</p>
+      <p *ngIf="formRegistro.get('numeroCelular').hasError('maxlength')">Máximo 10 caracteres numéricos</p>
+    </ion-item>
+
+  </form>
 
   <br>
 
-  <button ion-button full (click)="inicioApp()" >Registrarse</button>
+  <button ion-button full (click)="registrarUsuario()" [disabled]="formRegistro.invalid">Registrarse</button>
 
 </ion-content>

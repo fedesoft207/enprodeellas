@@ -6,14 +6,14 @@ from django.contrib.auth.models import User
 class UsuarioSerializer(serializers.ModelSerializer):
     username = serializers.CharField(write_only=True, source="user.username")
     password = serializers.CharField(write_only=True, source="user.password")
-    nickname = serializers.CharField(required=False)
+    #nickname = serializers.CharField(required=False)
     correo = serializers.CharField(required=False)
     numero_celular = serializers.CharField(required=False)
-    fecha_creacion = serializers.DateField(required=False)
+    fecha_creacion = serializers.DateTimeField(required=False)
 
     class Meta:
         model = User
-        fields = ('username','password','nickname','correo','numero_celular','fecha_creacion','id')
+        fields = ('username','password','correo','numero_celular','fecha_creacion','id')
 
     def create(self, validated_data, instance=None):
         user_data = validated_data.pop('user')
