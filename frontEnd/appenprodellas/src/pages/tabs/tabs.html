@@ -6,10 +6,11 @@
 -->
 
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color ="primary"> 
+    <button ion-button menuToggle >
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title>En pro de ellas</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -23,18 +24,27 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <button ion-item (click)="cerrarSesion()">
-          Cerrar Sesión
+        
+        <button ion-item (click)="homeApp()">
+          Home
         </button>
-        <!--button ion-item (click)="openPage(friendsPage)">
-                    Friends
-                  </button>
-                  <button ion-item (click)="openPage(eventsPage)">
-                    Events
-                  </button>
-                  <button ion-item (click)="closeMenu()">
-                    Close Menu
-                  </button-->
+
+        <button ion-item (click)="inicioAppInvitada()">
+          Iniciar como invitada
+        </button>       
+        
+        <button ion-item (click)="lineasAtencionMenu()">
+            Líneas de atención
+        </button>
+      
+        <button ion-item (click)="puntosAtencionMenu()">
+            Puntos de atención y orientación
+        </button>
+
+        <button ion-item (click)="cerrarSesion()" >
+            Cerrar sesión
+        </button>
+       
       </ion-list>
     </ion-content>
   </ion-menu>
@@ -45,7 +55,7 @@
   <ion-tabs #idTabs>
     <ion-tab tabTitle="Inicio" tabIcon="home" [root]="home"></ion-tab>
     <ion-tab tabTitle="Conozca más" tabIcon="paper" [root]="inicioApp"></ion-tab>
-    <ion-tab tabTitle="Lineas de atención" tabIcon="call" [root]="lineasAtencion"></ion-tab>
+    <ion-tab tabTitle="Lineas atención" tabIcon="call" [root]="lineasAtencion"></ion-tab>
     <ion-tab tabTitle="Puntos atención" tabIcon="pin" [root]="puntosAtencion"></ion-tab>
     <ion-tab show="false" tabTitle="Botón pánico" tabIcon="heart" [root]="botonPanico"></ion-tab>
   </ion-tabs>

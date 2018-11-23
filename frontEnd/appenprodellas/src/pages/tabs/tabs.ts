@@ -68,4 +68,21 @@ export class TabsPage {
     this.tabRef.select(0);//Se muestra el tab de menú Inicio
   }
 
+
+  homeApp() {
+    this.navCtrl.push(HomePage);
+  }
+
+  inicioAppInvitada() {
+    this.navCtrl.push(InicioappPage);
+  }
+
+  lineasAtencionMenu(){
+    this.navCtrl.push(LineasatencionPage);
+  }
+
+  puntosAtencionMenu(){
+    this.navCtrl.push(PuntosatencionPage);
+  }
+  
 }

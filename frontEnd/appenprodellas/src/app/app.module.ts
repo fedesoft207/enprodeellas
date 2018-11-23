@@ -22,6 +22,7 @@ import { ViolenciaPsicologicaPage } from '../pages/violencia-psicologica/violenc
 import { ViolenciaSexualPage } from '../pages/violencia-sexual/violencia-sexual';
 import { BotonPanicoPage } from '../pages/boton-panico/boton-panico';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ViolenciaPsicologicaDetallePage } from '../pages/violencia-psicologica-detalle/violencia-psicologica-detalle';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     ViolenciaPsicologicaPage,
     ViolenciaSexualPage,
     BotonPanicoPage,
+    ViolenciaPsicologicaDetallePage,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     ViolenciaPsicologicaPage,
     ViolenciaSexualPage,
     BotonPanicoPage,
+    ViolenciaPsicologicaDetallePage,
   ],
   providers: [
     StatusBar,

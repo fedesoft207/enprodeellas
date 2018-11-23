@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { Tabs } from 'ionic-angular/umd/navigation/nav-interfaces';
+import { InicioappPage } from '../inicioapp/inicioapp';
 
 /**
  * Generated class for the BotonPanicoPage page.
@@ -22,6 +23,11 @@ export class BotonPanicoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BotonPanicoPage');
-  }                               
+  }   
+  
+  omitirRegistro() {
+    this.navCtrl.push(InicioappPage);
+  }
+
   
 }

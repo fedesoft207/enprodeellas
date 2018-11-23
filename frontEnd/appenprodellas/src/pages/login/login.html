@@ -33,14 +33,17 @@
       <ion-item *ngIf="formLogin.get('password').errors && formLogin.get('password').dirty">
         <p *ngIf="formLogin.get('password').hasError('required')">Este campo es requerido</p>
       </ion-item>
+      <br>
     </form>
 
     <br>
 
     <button ion-button full (click)="iniciarSesion()" [disabled]="formLogin.invalid">Iniciar sesión</button>
 
-    <p>¿Olvido su contraseña?</p>
-
   </ion-list>
 
+  <br>
+  <hr>
+
+  <p>¿Olvido su contraseña?</p>
 </ion-content>

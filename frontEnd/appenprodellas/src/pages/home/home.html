@@ -1,42 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      En-pro-de-ellas
+      Inicio app
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  Libres de violencia en contra de la mujer
-  <p>
-    App guía de prevención y atención de victimas de delitos basados en la violencia de género 
-  </p>
 
-  <button ion-button full (click)="loginAcceso()" >Iniciar sesión</button>
-  <hr/>
-  <button ion-button full (click)="registrarUsuario()" color="light">Registrarse como usuario</button>
-  <br/>
+  <ion-card>
+    <img src="../../assets/imgs/En pro de ellas-0.png">
 
-  <!--ion-grid>
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-only (click)="inicioApp()" >
-          <ion-icon name="home"  > Inicio</ion-icon>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-only (click)="puntosAtencion()" >
-          <ion-icon name="pin"> Puntos</ion-icon>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-only (click)="lineasAtencion()" > 
-          <ion-icon name="call"> Líneas</ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid-->
+    <ion-card-content>
+          
+      <button ion-button full (click)="loginAcceso()">Iniciar sesión</button>
+      <br>
+      <button ion-button full (click)="registrarUsuario()" color="light">Registrarme como usuaria</button>
 
+      <br>
+      <hr>
 
+      <p>App guía de prevención y atención de victimas de delitos basados en la violencia de género. Si no deseas registrarte e iniciar la App como invitada por favor haz clic sobre el siguiente botón.</p>
+
+      <br>
+
+      <button ion-button full (click)="iniciarAppInvitada()" color="light">Iniciar App como invitada</button>
+
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>

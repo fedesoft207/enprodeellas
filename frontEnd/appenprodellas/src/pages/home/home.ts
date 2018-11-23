@@ -36,6 +36,8 @@ export class HomePage {
     this.navCtrl.push(LineasatencionPage);
   }
 
-  
+  iniciarAppInvitada() {
+    this.navCtrl.push(InicioappPage);
+  }
 
 }

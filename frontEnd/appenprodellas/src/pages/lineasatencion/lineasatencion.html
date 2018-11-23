@@ -13,70 +13,51 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
 
-    <div padding>
-        <ion-segment [(ngModel)]="lineasAtencion">
-          
-          <ion-segment-button value="lineaPurpura" >
-            Línea púrpura
-          </ion-segment-button>
-
-          <ion-segment-button value="emergencias">
-            Emergencias
-          </ion-segment-button>
-
-          <ion-segment-button value="fiscalia">
-              Fiscalía
-            </ion-segment-button>
-
-        </ion-segment>
-      </div>
-      
-      <div [ngSwitch]="lineasAtencion">
-        
-        <ion-list *ngSwitchCase="'lineaPurpura'" >
-          <ion-item>
-            <ion-thumbnail item-start>
-                <img src="../../assets/imgs/call.png">
-            </ion-thumbnail>
-            <h2>777-000-222-111</h2>
-          </ion-item>
-        </ion-list>
-      
-        <ion-list *ngSwitchCase="'emergencias'">
-          <ion-item>
-            <ion-thumbnail item-start>
-                <img src="../../assets/imgs/call.png">
-            </ion-thumbnail>
-            <h2>111-222-222-222</h2>
-          </ion-item>
-        </ion-list>
-
-        <ion-list *ngSwitchCase="'fiscalia'">
-            <ion-item>
-              <ion-thumbnail item-start>
-                  <img src="../../assets/imgs/call.png">
-              </ion-thumbnail>
-              <h2>888-001-201-122</h2>
-            </ion-item>
-        </ion-list>
+  <ion-card>
 
 
-        <ion-list>
-            <ion-item>
-              <ion-label>Cuadrantes de policía Chapinero</ion-label>
-              <ion-select [(ngModel)]="estaciones">
-                <ion-option value="nes">NES</ion-option>
-                <ion-option value="n64">Nintendo64</ion-option>
-                <ion-option value="ps">PlayStation</ion-option>
-                <ion-option value="genesis">Sega Genesis</ion-option>
-                <ion-option value="saturn">Sega Saturn</ion-option>
-                <ion-option value="snes">SNES</ion-option>
-              </ion-select>
-            </ion-item>
-          </ion-list>
+    <ion-card-content>
 
-      </div>
+      <p>A continuación podrás encontrar las líneas de atención a mujeres vícitimas de todo tipo de violencia. Una llamada puede marcar la diferencia.
+      </p>
+
+      <hr>
+
+      <ion-item>
+        <h3>Comisaría de familia</h3>
+        <ion-badge item-end>345-97-65</ion-badge>
+        <p>Calle 61 # 7-51</p>
+      </ion-item>
+
+      <ion-item>
+        <h3>Bienestar familiar</h3>
+        <ion-badge item-end>324-19-00</ion-badge>
+        <p>Carrera 16 # 63-81</p>
+      </ion-item>
+
+      <ion-item>
+        <h3>Fiscalía</h3>
+        <ion-badge item-end>348-62-00 </ion-badge>
+        <p>Carrera 13 # 54-74</p>
+      </ion-item>
+
+      <ion-item>
+        <h3>Línea orientación mujer</h3>
+        <ion-badge item-end>133 </ion-badge>
+        <p>Polícia nacional</p>
+      </ion-item>
+
+      <ion-item>
+        <h3>Línea púrpura</h3>
+        <ion-badge item-end>018000 112137</ion-badge>
+        <p>Secretaría distrita de la mujer</p>
+      </ion-item>
+
+    </ion-card-content>
+
+  </ion-card>
+
 
 </ion-content>
